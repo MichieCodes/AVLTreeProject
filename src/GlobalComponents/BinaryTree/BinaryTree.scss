@@ -1,7 +1,7 @@
 @import "../../Utils/_variables.scss"; 
 
 .linkBase {
-    stroke: $PrimaryAccentColor;
+    stroke: $PrimaryAccentColor !important;
 }
 .rd3t-tree-container {
     display: flex;
