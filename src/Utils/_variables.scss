@@ -1,0 +1,17 @@
+$TextColorDark: #000000;
+$TextColorLight: #FFFFFF;
+$TextColorDim: #FFF8F1;
+
+$DisplayBackgroundColor: #E9DACC;
+
+$PrimaryAccentColor: #FF6D3F; 
+$SecondaryAccentColor: #FCA245; 
+
+
+$BackgroundGradientStart: #273D50;
+$BackgroundGradientEnd: #192A38;
+
+$BorderRadius: 10px;
+
+$BackgroundGradient: repeating-linear-gradient(to bottom right, $BackgroundGradientStart 0%, $BackgroundGradientEnd 33.33%);
+$HeaderGradient: linear-gradient(to bottom right, $BackgroundGradientStart 0%, $BackgroundGradientEnd 100%);

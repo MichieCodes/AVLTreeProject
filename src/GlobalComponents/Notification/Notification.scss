@@ -1,0 +1,95 @@
+@import "../../Utils/_variables.scss";
+
+.NotificationList {
+    position: absolute;
+    top: 20px;
+    right: 0;
+    z-index: 99999;
+}
+
+.Notification {
+    cursor: pointer;
+    position: relative;
+    width: 16rem;
+    right: -100%;
+    margin-bottom: calc(0.5rem + 10px);
+    padding: 0.85rem;
+    font-size: 1.175rem;
+    border-radius: calc(#{$BorderRadius} + 1px) calc(#{$BorderRadius} + 1px) 0 0;
+    color: $TextColorDark;
+    background: $TextColorDim;
+    animation: Notif-SlideIn 0.5s ease-in-out forwards;
+}
+.Notification p {
+    margin: 0.15rem 0 0 0.5rem;
+    font-size: 1.05rem;
+    text-transform: capitalize;
+    color: $BackgroundGradientEnd;
+}
+.Notification b::before {
+    content: "";
+    pointer-events: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 10px);
+    left: 0;
+    top: 0;
+    border-radius: $BorderRadius;
+    filter: drop-shadow(5px 5px 0px $PrimaryAccentColor);
+    background: $TextColorDim;
+    z-index: -1;
+}
+.Notification b::after {
+    content: "";
+    pointer-events: none;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: calc(100% + 10px);
+    left: 0;
+    top: 0;
+    border: 3px solid $TextColorDark;
+    border-radius: $BorderRadius;
+    z-index: 1;
+}
+.Notification::before, .Notification::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -10px;
+    height: 10px;
+    background: $BackgroundGradientEnd;
+    border-radius: 0 0 calc(#{$BorderRadius} + 1px) calc(#{$BorderRadius} + 1px);
+}
+.Notification::after {
+    background: $SecondaryAccentColor;
+    animation: var(--Notif-Progress-Animation) ease-in-out forwards;
+}
+.Notification:hover::after {
+    animation-play-state: paused;
+}
+
+.NotificationSlideOut {
+    animation: Notif-ScaleOut 0.5s ease-in-out forwards;
+    animation-delay: 0.15s;
+}
+.NotificationSlideOut > div {
+    animation: Notif-SlideOut 0.5s ease-in-out forwards;
+}
+
+@keyframes Notif-Progress {
+    to {width: 5.5%}
+}
+@keyframes Notif-SlideIn {
+    from {opacity: 0; right: -100%}
+    to {opacity: 1; right: 25px}
+}
+@keyframes Notif-SlideOut {
+    from {opacity: 1; right: 25px}
+    to {opacity: 0; right: -100%}
+}
+@keyframes Notif-ScaleOut {
+    to {height: 0}
+}

@@ -1,0 +1,68 @@
+@import "../../Utils/_variables.scss"; 
+
+.linkBase {
+    stroke: $PrimaryAccentColor;
+}
+.rd3t-tree-container {
+    display: flex;
+}
+
+.TreeNode {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    transform: scale(1.125);
+
+    & > span {
+        width: 100%;
+
+        & > span {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            padding: 3px;
+            font-size: 1.35rem;
+            text-align: center;
+            border: 2.5px solid $BackgroundGradientStart;
+            border-radius: $BorderRadius;
+            background: $TextColorLight;
+        }
+    }
+}
+.EmptyTreeNode {
+    display: none;
+}
+
+.ToolTip {
+    position: absolute;
+    width: max-content;
+    max-width: 20rem;
+    top: 100%;
+    margin-top: 2.5px;
+    padding: 5px;
+    border: 2.5px solid $BackgroundGradientStart;
+    border-radius: $BorderRadius;
+    box-shadow: 4px 4px 0px $BackgroundGradientEnd;
+    background: $TextColorDim;
+    transform: scale(0);
+    transform-origin: top;
+    
+    span {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-size: 1.325rem;
+        color: $BackgroundGradientEnd;
+    }
+
+    b {
+        margin-right: 5px;
+        font-size: 1.475rem;
+        color: $TextColorDark;
+    }
+}
+
+@keyframes ToolTipScaleIn {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}

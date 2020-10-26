@@ -1,0 +1,40 @@
+@import "../../Utils/_variables.scss"; 
+
+.NumberInput {
+    display: flex;
+}
+.NumberInput input {
+    width: 100%;
+    padding: 5px;
+    font-size: 1.375rem;
+    text-align: center;
+    outline: 0;
+}
+
+.NumberInput .InputLabel {
+    font-size: 1.65rem;
+    margin-top: 3.5px;
+    margin-right: 0.75rem;
+}
+
+.Arrow {
+    pointer-events: none;
+    position: absolute;
+    right: 7px;
+    fill: $PrimaryAccentColor;
+    stroke: $BackgroundGradientStart;
+    transition: stroke, fill 0.15s ease-in-out;
+}
+
+.NumberInput input[type=number]::-webkit-inner-spin-button, 
+.NumberInput input[type=number]::-webkit-outer-spin-button { 
+    cursor: pointer;
+    opacity: 0;
+}
+.NumberInput input[type=number].NoAppearance::-webkit-inner-spin-button,
+.NumberInput input[type=number].NoAppearance::-webkit-outer-spin-button {
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none; 
+    margin: 0;
+}

@@ -1,0 +1,71 @@
+@import "./Utils/_variables.scss";
+
+::-webkit-scrollbar {
+    width: 14px;
+}
+::-webkit-scrollbar-track, ::-webkit-scrollbar-thumb {
+    border: 2px solid $BackgroundGradientStart;
+    border-radius: $BorderRadius;
+}
+::-webkit-scrollbar-track {
+    background: $DisplayBackgroundColor;
+}
+::-webkit-scrollbar-thumb {
+    background: $PrimaryAccentColor; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: lighten($SecondaryAccentColor, 10); 
+}
+
+#root {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    color: $TextColorDark;
+    background: $BackgroundGradient;
+    overflow: hidden;
+}
+
+.App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 70vw;
+    padding: 40px 0 50px;
+}
+
+nav {
+    display: flex;  
+    justify-content: flex-end;
+    margin-bottom: 40px;
+    font-size: 1.275rem;
+}
+nav li {
+    cursor: pointer;
+    display: flex;
+    opacity: 0.5;
+    color: $TextColorDim;
+    transition: color, opacity 0.15s ease-in-out;
+}
+nav li:hover {
+    color: $TextColorLight;
+    opacity: 1;
+}
+nav .ActiveLink {
+    opacity: 1;
+}
+
+.Input {
+    border: 3px solid $BackgroundGradientStart;
+    border-radius: $BorderRadius;
+    box-sizing: border-box;
+    box-shadow: 4px 4px 0px $SecondaryAccentColor;
+    background: $TextColorLight;
+    transition: border, box-shadow 0.15s ease-in-out;
+}
+.Input:hover {
+    border: 3px solid $TextColorDark;
+    box-shadow: 4px 4px 0px $PrimaryAccentColor;
+}
+

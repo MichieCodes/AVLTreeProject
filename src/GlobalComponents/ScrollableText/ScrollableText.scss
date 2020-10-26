@@ -1,0 +1,8 @@
+@keyframes Scroll-In {
+    0% {text-indent: var(--scroll-in-from);}
+    100% {text-indent: calc(var(--scroll-amount));}
+}
+@keyframes Scroll-Out {
+    0% {text-indent: calc(var(--scroll-out-from));}
+    100% {text-indent: 0;}
+}

@@ -1,0 +1,40 @@
+@import "../../Utils/_variables.scss";
+
+.DisplayPanel {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 5px;
+    height: 100%;
+    padding: 20px;
+    border: 4px solid $BackgroundGradientEnd;
+    border-radius: $BorderRadius;
+    box-shadow: 10px 10px 0px $PrimaryAccentColor;
+    background: $TextColorDim;
+}
+
+.Display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 5px;
+    border: 4px solid $BackgroundGradientEnd;
+    border-radius: $BorderRadius;
+    background: $DisplayBackgroundColor;
+}
+.Display span {
+    font-size: 2.525rem;
+}
+
+.PanelButtonGroup {
+    display: flex;
+    margin-top: 20px;
+}
+.PanelButtonGroup .PrimaryButton {
+    margin-right: 30px;
+    border: 4px solid $BackgroundGradientEnd;
+}
+.PanelButtonGroup .PrimaryButton:last-of-type {
+    margin-right: 0;
+}

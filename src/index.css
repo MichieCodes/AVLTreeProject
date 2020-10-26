@@ -1,0 +1,16 @@
+* {
+  font-family: 'Bellota', 'Helvetica Neue', 'Segoe UI', cursive;
+}
+
+body {
+  margin: 0;
+  font-weight: 700;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

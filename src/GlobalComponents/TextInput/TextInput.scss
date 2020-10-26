@@ -1,0 +1,26 @@
+@import "../../Utils/_variables.scss"; 
+
+.TextInput {
+    display: flex;
+}
+
+.TextInput input {
+    padding: 5px;
+    font-size: 1.25rem;
+    outline: 0;
+    width: 100%;
+}
+.TextInput:hover input {
+    border: 3px solid $TextColorDark;
+    box-shadow: 4px 4px 0px $PrimaryAccentColor;
+}
+.TextInput input:focus {
+    border: 3px solid $TextColorDark;
+    box-shadow: 4px 4px 0px $PrimaryAccentColor;
+}
+
+.InputLabel {
+    font-size: 1.65rem;
+    margin-top: 2px;
+    margin-right: 0.75rem;
+}

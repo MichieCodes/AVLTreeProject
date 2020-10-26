@@ -1,0 +1,108 @@
+@import "../../Utils/_variables.scss";
+
+.Overlay {
+    cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 99999;
+    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.5);
+    animation: OverlayFadeIn 0.20s ease-in-out;
+
+    & ~ .Overlay {
+        z-index: 100000;
+    }
+}
+
+.PrimaryModal {
+    position: absolute;
+    left: 50%;
+    min-width: 40vw;
+    max-width: 45vw;
+    margin: -5px 0 0 -5px;
+    transform: translateX(-50%);
+    user-select: none;
+    height: min-content;
+    border-radius: calc(#{$BorderRadius} + 2px);
+    color: $TextColorDark;
+    box-shadow: 10px 10px 0px $BackgroundGradientEnd, 0px 0px 20px rgba(0, 0, 0, 0.4);
+    background: $TextColorDim;
+    z-index: 100000;
+    animation: ModalFadeIn 0.20s ease-in-out;
+}
+.PrimaryModal .ModalHeader {
+    position: relative;
+    margin: 0 !important;
+    padding: 0.4em;
+    font-size: 1.5rem !important;    
+    text-align: center;
+    border-radius: $BorderRadius $BorderRadius 0 0;
+    color: $TextColorLight;
+    background: $HeaderGradient;
+}
+.PrimaryModal .ModalHeader span {
+    cursor: pointer;
+    position: absolute;
+    right: 14px;
+    top: calc(14px - 0.75rem);
+    font-size: 1.75rem !important;
+    text-transform: lowercase;
+    transition: color 0.15s ease-in-out;
+}
+.PrimaryModal .ModalHeader span:hover {
+    color: $DisplayBackgroundColor
+}
+
+.ModalContentContainer {
+    padding: 0 20px 20px;
+    border: 5px solid $BackgroundGradientStart;
+    border-top: 0;
+    border-radius: 0 0 $BorderRadius $BorderRadius;
+}
+.ModalContent {
+    max-height: 70vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.ModalButtonContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.ModalButtonContainer .PrimaryButton {
+    width: 35%;
+    padding: 8px 4px;
+}
+
+@keyframes OverlayFadeIn {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}
+@keyframes ModalFadeIn {
+    from {opacity: 0; margin-top: 5%}
+    to {opacity: 1; margin-top: -5px}
+}
+
+.OverlayFadeOut {
+    opacity: 0;
+    animation: OverlayFadeOut 0.20s ease-in-out;
+}
+@keyframes OverlayFadeOut {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+.ModalFadeOut {
+    opacity: 0;
+    margin-top: 5%;
+    animation: ModalFadeOut 0.20s ease-in-out;
+}
+@keyframes ModalFadeOut {
+    from {opacity: 1; margin-top: -5px}
+    to {opacity: 0; margin-top: 5%}
+}

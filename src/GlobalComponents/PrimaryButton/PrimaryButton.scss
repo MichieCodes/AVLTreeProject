@@ -1,0 +1,25 @@
+@import "../../Utils/_variables.scss";
+
+.PrimaryButton {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px 5px;
+    text-align: center;
+    outline: 0;
+    font-size: 1.25rem;
+    border: 3.5px solid $BackgroundGradientEnd;
+    border-radius: $BorderRadius;
+    color: $TextColorLight;
+    background: $PrimaryAccentColor;
+    transition: background 0.15s ease-in-out;
+
+    input {
+        cursor: pointer;
+        height: 0;
+        appearance: none;
+        width: 0;
+    }
+}
+.PrimaryButton:hover {
+    background: $SecondaryAccentColor;
+}

@@ -1,0 +1,36 @@
+@import "../../Utils/_variables.scss";
+
+.Overlay.SpinnerOverlay {
+    cursor: progress;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Spinner {
+    filter: drop-shadow(4px 4px 0px rgba(0, 0, 0, 0.5));
+}
+
+.SpinnerStroke {
+    stroke: $BackgroundGradientEnd;
+}
+
+.SpinnerPath {
+    stroke: $SecondaryAccentColor;
+    stroke-dasharray: 121.7326;
+    stroke-dashoffset: 121.7326;
+    transform-origin: 50%;
+    transform: rotate(-90deg);
+    
+    animation: FillSpinner 6s linear forwards;
+    animation-iteration-count: infinite;
+}
+
+@keyframes FillSpinner {
+    50% {
+        stroke-dashoffset: 0;
+    }
+    100% {
+        stroke-dashoffset: -121.7326;
+    }
+}

@@ -1,0 +1,95 @@
+@import "../../Utils/_variables.scss"; 
+
+.BookListButtonGroup {
+    margin: 20px 0;
+    display: flex;
+
+    & > .PrimaryButton {
+        margin-right: 10px;
+        padding: 5px 2.5px;
+        font-size: 1.225rem;
+    }
+    & > .PrimaryButton:last-of-type {
+        margin-right: 0;
+    }
+}
+
+.BookTable {
+    background: $TextColorLight;
+    padding: 10px;
+    font-size: 1.05rem;
+    border: 2.5px solid $TextColorDark;
+    border-radius: $BorderRadius;
+    color: $TextColorDark;
+
+    table {
+        width: 100%;
+        text-align: left;
+        border: 0;
+
+        thead {
+            font-size: 1.2625rem;
+        }
+    }
+
+    .BookProperty {
+        color: $BackgroundGradientEnd;
+
+        span {
+            display: block;
+            margin: 3.5px 10px 10px 0;
+            white-space: nowrap;
+            overflow: hidden;
+        }
+    }
+
+    .BookActionButtonGroup {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: -2.5px;
+        color: $BackgroundGradientEnd;
+        
+        & > button {
+            cursor: pointer;
+            width: 5rem;
+            margin-right: 2px;
+            text-align: center;
+            outline: 0;
+            font-size: 1.05rem;
+            border: 3px solid $BackgroundGradientStart;
+            border-radius: $BorderRadius;
+            box-shadow: 4px 4px 0px $SecondaryAccentColor;
+            background: $TextColorDim;
+            transition: border, box-shadow, background 0.15s ease-in-out;
+
+            &:hover {
+                border: 3px solid $TextColorDark;
+                box-shadow: 4px 4px 0px $PrimaryAccentColor;
+                background: $DisplayBackgroundColor;
+            }
+        }
+        & > button:first-of-type {
+            margin-right: 14px;
+        }
+    }
+
+    & > .PrimaryButton {
+        margin-top: 10px;
+        padding: 5px 2.5px;
+        font-size: 1.225rem;
+    }
+}
+
+.PropertyInputGroup {
+    display: grid;
+    grid-template-columns: max-content auto;
+    grid-gap: 14px 0;
+    gap: 14px 0;
+    margin: 20px 4px 4px 0;
+}
+
+.PropertyRadioButtonGroup {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0 4px;
+}
