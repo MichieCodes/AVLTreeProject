@@ -13,7 +13,6 @@ const BooksReducer = (Books, Action) => {
 		case "DELETE_ALL_BOOKS":
       return [];
 		default:
-			console.log("ERROR");
 			return Books;
 	}
 }

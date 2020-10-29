@@ -19,7 +19,6 @@ function AVLTreeLogModal({CloseCallback}) {
 
   const [GetTreeLogs] = useLazyQuery(GET_LOGS, {fetchPolicy: "cache-and-network", 
     onCompleted: (GetTreeLogsQueryData) => {
-      console.log(GetTreeLogsQueryData.GetAVLTreeLogs)
       setTimeout(() => {
         setLoading(false);
         setAVLTreeLogs(GetTreeLogsQueryData.GetAVLTreeLogs);

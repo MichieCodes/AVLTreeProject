@@ -26,7 +26,7 @@ To validate the AVL property, I create a breadth first traversal of the Binary T
 ### Installation
 - To run the API on your local machine, download the code posted to elearning
     - In your favorite terminal type **gradlew bootRun** (or **gradle bootRun** for Unix/Linux machines)
-- To run the Frontend on your local machine, pull the code from my github repo: https://michietuts.github.io/AVLTreeProject/
+- To run the Frontend on your local machine, pull the code from my github repo: https://github.com/MichieTuts/AVLTreeProject
     - In your favorite terminal run **npm install** to install the needed dependencies
     - Run **npm start** to run the server
 

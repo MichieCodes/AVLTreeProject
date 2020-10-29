@@ -36,14 +36,15 @@ const GENERATE_TREE = gql`
 function ChooseNodeModal({CloseCallback}) {
   const [Loading, setLoading] = React.useState(false);
   const [ShowSpinner, setShowSpinner] = React.useState(false);
-  const [Callback, setCallback] = React.useState(() => 0);
+  const [Callback, setCallback] = React.useState(null);
   const [Nodes, setNodes] = React.useState(1);
   const {setBinaryTreeData} = UseBinaryTreeFunctionContext();
   const PushNotification = UseNotificationContext();
 
   const Choose = (cb) => {
     setLoading(true);
-    setCallback(cb)
+    setShowSpinner(true);
+    setCallback(() => cb);
     GenerateBinaryTree({variables: {nodes: Nodes}});
   }
 
@@ -58,6 +59,8 @@ function ChooseNodeModal({CloseCallback}) {
         PushNotification({type: "Success", title: "Generated Tree", body: "Please Check Logs", timeout: 4500});
       }, 500)
     }, onError: () => {
+        setLoading(false);
+        
         setTimeout(() => {
             Callback && Callback();
             PushNotification({title: "Failed To Generate Tree", 

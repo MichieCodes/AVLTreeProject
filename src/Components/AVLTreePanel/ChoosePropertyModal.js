@@ -44,14 +44,15 @@ const GENERATE_TREE = gql`
 function ChoosePropertyModal({setSelected, CloseCallback}) {
   const [Loading, setLoading] = React.useState(false);
   const [ShowSpinner, setShowSpinner] = React.useState(false);
-  const [Callback, setCallback] = React.useState(() => 0);
+  const [Callback, setCallback] = React.useState(null);
   const [SelectedProperty, setSelectedProperty] = React.useState(Properties[0].title);
   const {setAVLTreeData} = UseBinaryTreeFunctionContext();
   const PushNotification = UseNotificationContext();
 
   const Choose = (cb) => {
     setLoading(true);
-    setCallback(cb);
+    setShowSpinner(true);
+    setCallback(() => cb);
     setSelected(SelectedProperty);
     GenerateAVLTree({variables: {comparator: SelectedProperty}});
   }
@@ -67,6 +68,8 @@ function ChoosePropertyModal({setSelected, CloseCallback}) {
         PushNotification({type: "Success", title: "Generated Tree", body: "Please Check Logs", timeout: 4500});
       }, 500)
     }, onError: () => {
+        setLoading(false);
+        
         setTimeout(() => {
             Callback && Callback();
             PushNotification({title: "Failed To Generate Tree", 
