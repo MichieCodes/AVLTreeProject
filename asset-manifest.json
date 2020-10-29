@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/AVLTreeProject/static/css/main.c11ca440.chunk.css",
-    "main.js": "/AVLTreeProject/static/js/main.96f7cff4.chunk.js",
-    "main.js.map": "/AVLTreeProject/static/js/main.96f7cff4.chunk.js.map",
+    "main.css": "/AVLTreeProject/static/css/main.bb8b1872.chunk.css",
+    "main.js": "/AVLTreeProject/static/js/main.3eb2136f.chunk.js",
+    "main.js.map": "/AVLTreeProject/static/js/main.3eb2136f.chunk.js.map",
     "runtime-main.js": "/AVLTreeProject/static/js/runtime-main.566acb56.js",
     "runtime-main.js.map": "/AVLTreeProject/static/js/runtime-main.566acb56.js.map",
     "static/js/2.2b14e53b.chunk.js": "/AVLTreeProject/static/js/2.2b14e53b.chunk.js",
     "static/js/2.2b14e53b.chunk.js.map": "/AVLTreeProject/static/js/2.2b14e53b.chunk.js.map",
     "index.html": "/AVLTreeProject/index.html",
-    "precache-manifest.f81d91b565442db30ff5ae5dd7c4aa51.js": "/AVLTreeProject/precache-manifest.f81d91b565442db30ff5ae5dd7c4aa51.js",
+    "precache-manifest.1940f5c1234624aaa7ac0a2c734309af.js": "/AVLTreeProject/precache-manifest.1940f5c1234624aaa7ac0a2c734309af.js",
     "service-worker.js": "/AVLTreeProject/service-worker.js",
-    "static/css/main.c11ca440.chunk.css.map": "/AVLTreeProject/static/css/main.c11ca440.chunk.css.map",
+    "static/css/main.bb8b1872.chunk.css.map": "/AVLTreeProject/static/css/main.bb8b1872.chunk.css.map",
     "static/js/2.2b14e53b.chunk.js.LICENSE.txt": "/AVLTreeProject/static/js/2.2b14e53b.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.566acb56.js",
     "static/js/2.2b14e53b.chunk.js",
-    "static/css/main.c11ca440.chunk.css",
-    "static/js/main.96f7cff4.chunk.js"
+    "static/css/main.bb8b1872.chunk.css",
+    "static/js/main.3eb2136f.chunk.js"
   ]
 }
