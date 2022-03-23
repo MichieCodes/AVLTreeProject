@@ -3,7 +3,7 @@ I created a Java API that generates an AVL Tree from a list of books from a defa
 
 The API can also randomly generate a Binary Tree and check to see if the Binary Tree is a BST and an AVL Tree. The logs will show if the Tree is a BST and/or AVL
 
-The API is deployed to Heroku, while the Fontend is deployed to Github pages. Here is the link: https://michietuts.github.io/AVLTreeProject/
+The API is deployed to Heroku, while the Fontend is deployed to Github pages. Here is the link: https://michiecodes.github.io/AVLTreeProject/
 
 ## Meeting the Assignment Requirements
 #### Part A
@@ -24,9 +24,9 @@ The API is deployed to Heroku, while the Fontend is deployed to Github pages. He
 To validate the AVL property, I create a breadth first traversal of the Binary Tree, and then I create a AVL Tree from that traversal list. If any rotations are performed inside the AVLTree, then the Binary Tree is not an AVL Tree.
 
 ### Installation
-- To run the API on your local machine, download the code posted to elearning
+- To run the API on your local machine, pull the code from my repo: https://github.com/MichieCodes/AVLTreeProjectGraphQL
     - In your favorite terminal type **gradlew bootRun** (or **gradle bootRun** for Unix/Linux machines)
-- To run the Frontend on your local machine, pull the code from my github repo: https://github.com/MichieTuts/AVLTreeProject
+- To run the Frontend on your local machine, pull the code from my repo: https://github.com/MichieCodes/AVLTreeProject
     - In your favorite terminal run **npm install** to install the needed dependencies
     - Run **npm start** to run the server
 

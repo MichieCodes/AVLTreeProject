@@ -1,7 +1,7 @@
 {
   "name": "avl-trees",
   "version": "0.1.0",
-  "homepage": "https://michietuts.github.io/AVLTreeProject",
+  "homepage": "https://michiecodes.github.io/AVLTreeProject",
   "private": true,
   "dependencies": {
     "@apollo/client": "^3.2.5",
